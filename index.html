@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storyboard</title>
+    <style>
+        .navbar {
+            display: flex;
+            width: 100%;
+            height: 90px;
+            background: #F0F0F0;
+            /*overflow: hidden;*/
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        
+        .logo {
+            display: inline-block;
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 80px;
+        }
+        
+        .menu {
+            position: absolute;
+            left: 70%;
+        }
+        
+        .nav-menu {
+            display: inline-block;
+            /*width: 30px;*/
+            height: fit-content;
+            box-shadow: 0 0 2px #888;
+            border-radius: 9999px;
+            list-style: none;
+            background-color: #3683F0;
+            padding: 0.5em 0.6em;
+            /*left: 80%;
+            right: 19.65%;
+            top: 1.72%;
+            bottom: 97.84%;*/
+            text-align: center;
+            margin-right: 20px;
+            font-family: 'Font Awesome 5 Free';
+            font-style: normal;
+            font-weight: 900;
+            letter-spacing: 0.02em;
+            color: #FFFFFF;
+        }
+        /*hamburger menu*/
+        
+        #hamburger {
+            display: inline-flex;
+            flex-direction: row;
+            width: 178px;
+            height: 40px;
+            border-top-right-radius: 50px;
+            position: absolute;
+            top: 111px;
+            margin-left: 2.5em;
+            padding: 10px;
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+        /*#super_head {
+            display: inline;
+            margin-left: 25%;
+            padding: 0.5em;
+            font-size: 0.875em;
+        }*/
+        
+        #ham_head {
+            margin-top: 50px;
+            margin-left: 24%;
+            font-size: 0.875em;
+            font-weight: bold;
+        }
+        
+        #myLinks {
+            display: none;
+        }
+        
+        #ham_border {
+            width: 220px;
+            height: 814px;
+            padding-left: 0%;
+            margin: 15px 0 15px;
+            margin-left: -4%;
+            border: solid 1px;
+            border-radius: 50px;
+        }
+        
+        .ham {
+            color: #564f51;
+            margin-top: 10px;
+            margin-left: 25%;
+            padding: 0 16px;
+            text-decoration: none;
+            font-size: 1.1em;
+            display: block;
+        }
+        /*a.icon {
+            background: none;
+            font-size: 0.875em;
+            display: block;
+            position: relative;
+            color: white;
+            right: -10%;
+            /*padding-top: 20px;
+        }*/
+        
+        .icon:hover {
+            background: transparent;
+        }
+        
+        .ham:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        /*hamburger ends*/
+        
+        h2 {
+            display: inline-block;
+            vertical-align: middle;
+            height: 80px;
+            line-height: 40px;
+        }
+        
+        .ltext {
+            display: inline-block;
+            color: #0029FF;
+            vertical-align: middle;
+            height: 80px;
+        }
+        
+        .profile {
+            display: inline-block;
+            top: 24px;
+            position: absolute;
+            left: 85%;
+        }
+        
+        #pp {
+            border-radius: 250px;
+            width: 40.36px;
+            height: 40px;
+        }
+        
+        .d {
+            display: inline-block;
+            color: #0029FF;
+            position: absolute;
+            left: 90%;
+            line-height: 80px;
+        }
+        
+        section {
+            position: relative;
+            width: 100%;
+            height: 30px;
+            padding: 0.5px 0 0 30%;
+            font-weight: 900;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            background-color: #0029FF;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /*Card 2*/
+        
+        #t2 {
+            border: 1p solid;
+        }
+        /*------------------------------------------------------*/
+        
+        .cards {
+            display: absolute;
+            left: 24px;
+            float: left;
+        }
+        
+        .card {
+            width: 420px;
+            margin: 30px;
+            display: block;
+            height: 250px;
+            overflow: hidden;
+            word-wrap: break-word;
+            border-radius: 10px;
+            border: solid 1px;
+            box-shadow: 0 2px 10px #000000;
+        }
+        /*Card 9*/
+        
+        .cardss {
+            display: absolute;
+            margin: auto;
+            float: left;
+        }
+        
+        .long_card {
+            width: 560px;
+            margin: 30px 0 30px 250px;
+            display: block;
+            height: 350px;
+            overflow: hidden;
+            word-wrap: break-word;
+            border-radius: 10px;
+            border: solid 1px;
+            box-shadow: 0 2px 10px #000000;
+        }
+        /*--------------------------------------*/
+        
+        .card_head {
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            height: 30px;
+            margin: 0;
+            text-align: center;
+            background-color: #000000;
+            color: #FFF;
+        }
+        
+        #main {
+            display: inline-flex;
+        }
+        
+        .parent {
+            margin-top: 20px;
+            border-radius: 50px;
+            width: 1050px;
+            border: solid 1px;
+            margin-left: 150px;
+        }
+        
+        #ta1 {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        audio {
+            position: relative;
+            background-size: cover;
+            margin-top: 15%;
+            margin-left: 15%;
+        }
+        
+        .drop {
+            margin-left: 95%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <!--<span>-->
+        <a href="#"><img class="logo" src="logo-removebg-preview.png"></a>
+        <h2>DEEP</h2>&nbsp;
+        <h2 class="ltext">THOUGHT</h2>
+        <!--</span>-->
+        <ul class="menu">
+            <li class="nav-menu"><i class="fa fa-home" aria-hidden="true"></i></li>
+            <li class="nav-menu"><i class="fa fa-tools" aria-hidden="true"></i></li>
+            <li class="nav-menu"><i class="fa fa-bell" aria-hidden="true"></i></li>
+        </ul>
+        <div class="profile">
+            <img src="attractive-beautiful-beauty-1376051.jfif" id="pp" alt="profile-pic">
+        </div>
+        <i class="d fa fa-ellipsis-v" aria-hidden="true"></i>
+    </div>
+    <!--navbar ends-->
+
+    <div id="main">
+        <!--hamburger menu-->
+        <div id="ham_border">
+            <div id="myLinks">
+                <p id="ham_head">1.New Project</p>
+                <hr/>
+                <a href="#t1" class="ham">Task Heading 1</a>
+                <hr/>
+                <a href="#t2" class="ham">Task Heading 2</a>
+                <hr/>
+                <a href="#t3" class="ham">Task Heading 3</a>
+                <hr/>
+                <a href="#t4" class="ham">Task Heading 4</a>
+                <hr/>
+                <a href="#t5" class="ham">Task Heading 5</a>
+                <hr/>
+                <a href="#t6" class="ham">Task Heading 6</a>
+                <hr/>
+                <a href="#t7" class="ham">Task Heading 7</a>
+                <hr/>
+                <a href="#t8" class="ham">Task Heading 8</a>
+                <hr/>
+                <a href="#t9" class="ham">Task Heading 9</a>
+
+            </div>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <div id="hamburger">
+                    <p></p>Storyboard&nbsp;<i class="fa fa-bars" style="margin:auto;" aria-hidden="true"></i>
+                </div>
+
+            </a>
+        </div>
+        <!--hamburger ennds-->
+
+        <div class="parent">
+            <section>
+                You are taking challanges of new project
+            </section>
+            <h4 style="text-align: center;"> New Project</h4>
+            <!--Card 1-->
+            <div class="cards" id="t1">
+                <article class="card">
+                    <header>
+                        <h3 class="card_head">Task Heading 1</h3>
+                    </header>
+                    <div>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                            specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software including versions of Lorem Ipsum <i class="drop fa-solid fa-angle-down" aria-hidden="true"></i>
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <!--Card 2-->
+            <div class="cards" id="t2">
+                <article class="card" style="width:auto; height:fit-content;">
+                    <header>
+                        <h3 class="card_head">Task Heading 2</h3>
+                    </header>
+                    <div>
+                        <hr/>
+                        <i class="fa-solid fa-angle-up" aria-hidden="true"></i>
+                        <label style="font-weight:bold; padding-left:50px;">Thread A</label>
+                        <hr/>
+                        <div class="box"><img src="th2.png" width="448" /></div>
+                    </div>
+                </article>
+            </div>
+            <!--Card 3-->
+            <div class="cards" id="t3">
+                <article class="card">
+                    <header>
+                        <h3 class="card_head">Task Heading 3</h3>
+                    </header>
+                    <div>
+                        <textarea cols="50" rows="10" style="margin-top:5px;" id="ta1" placeholder="Reflect as per given guidelines"></textarea><br>
+                        <i class="drop fa-solid fa-angle-down"></i>
+                    </div>
+                </article>
+            </div>
+            <!--Card 4-->
+            <div class="cards" id="t4">
+                <article class="card">
+                    <header>
+                        <h3 class="card_head">Task Heading 4</h3>
+                    </header>
+                    <div>
+                        <a href="https://drive.google.com/file/d/1Pxw83bTKE3KkOyYnwm1u6DSVjntSrNTp/preview" target="_blank"><img src="./Big Data.png" width=390 height=200/><i class="fa-solid fa-angle-down"></i> </a>
+                    </div>
+                </article>
+            </div>
+            <!--Card 5-->
+            <div class="cards" id="t5">
+                <article class="card">
+                    <header>
+                        <h3 class="card_head">Task Heading 5</h3>
+                    </header>
+                    <div>
+                        <a href="https://media.giphy.com/media/IzjhI7ggjDlEnMxZMu/giphy.gif" target="_blank"><img src="https://media.giphy.com/media/IzjhI7ggjDlEnMxZMu/giphy.gif" width=400 height=200/><i class="drop fa-solid fa-angle-down"></i></a>
+                    </div>
+                </article>
+            </div>
+            <!--Card 6-->
+            <div class="cards" id="t6">
+                <article class="card">
+                    <header>
+                        <h3 class="card_head">Task Heading 6</h3>
+                    </header>
+                    <div>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                            specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software including versions of Lorem Ipsum <i class="drop fa-solid fa-angle-down" aria-hidden="true"></i>
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <!--Card 7-->
+            <div class="cards" id="t7">
+                <article class="card" style="width:auto; height:fit-content">
+                    <header>
+                        <h3 class="card_head">Task Heading 7</h3>
+                    </header>
+                    <div>
+                        <img src="./th7.png" width="452" />
+                    </div>
+                </article>
+            </div>
+            <!--Card 8-->
+            <div class="cards" id="t8">
+                <article class="card">
+                    <header>
+                        <h3 class="card_head">Task Heading 8</h3>
+                    </header>
+                    <div>
+                        <audio controls>
+                        <source src="./WhatsApp Ptt 2022-05-24 at 9.19.05 AM.ogg" type="audio/ogg">
+                        Your browser does not support audio
+                    </audio><i class="drop fa-solid fa-angle-down" style="margin-bottom:-10px"></i>
+                    </div>
+                </article>
+            </div>
+            <!--Card 9-->
+            <div class="cardss" id="t9">
+                <article class="long_card">
+                    <header>
+                        <h3 class="card_head">Task Heading 9</h3>
+                    </header>
+                    <div>
+                        <iframe width="560" height="300" src="https://www.youtube.com/embed/s8H0Sx7jy7c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen><i class="drop fa-solid fa-angle-down"></i></iframe>
+                        <i class="drop fa-solid fa-angle-down" aria-hidden="true"></i> </div>
+                </article>
+            </div>
+        </div>
+        <!--parent container-->
+    </div>
+    <!--main container-->
+
+    <script>
+        //hamburger script
+
+        function myFunction() {
+
+            var x = document.getElementById("myLinks");
+
+            if (x.style.display === "block") {
+
+                x.style.display = "none";
+
+            } else {
+
+                x.style.display = "block";
+
+            }
+
+        }
+
+        //hamburger script ends
+    </script>
+
+</body>
+
+</html>
